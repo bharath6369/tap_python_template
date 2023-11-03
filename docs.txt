@@ -1,0 +1,31 @@
++++++++++++++++++++
+
+install allure
+
+sudo apt-get install default-jre
+
+wget https://github.com/allure-framework/allure2/releases/download/2.18.1/allure_2.18.1-1_all.deb
+
+sudo dpkg -i allure_2.18.1-1_all.deb
+
+install python package  allure-behave
+
+
+Generate The Allure report
+
+behave -f allure_behave.formatter:AllureFormatter -o reports/ features
+
+Convert allure report  json to html format
+
+  allure serve reports
+++++++++++++++++++++++++++++++++++++++++
+
+debug the code
+
+pip install ipdb
+
+put this line in code  pdb.set_trace()
+
+run   behave --no-capture -s
+
+++++++++++++++++++++++++++++++++++++++++++++
